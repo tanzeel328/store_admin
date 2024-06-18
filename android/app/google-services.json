@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "533146630759",
+    "project_id": "cheap-shoe-store",
+    "storage_bucket": "cheap-shoe-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533146630759:android:42844fd390a82d596bf2c2",
+        "android_client_info": {
+          "package_name": "com.example.shoe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533146630759-s6rpim7pnitrpbraj2qo860p2vm1set7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoe_app",
+            "certificate_hash": "2bcdc6d0c1b2e0eb08211a183fa3faa1d9e87eb4"
+          }
+        },
+        {
+          "client_id": "533146630759-ffqbe2f0vjrfgemne8brei92fu9vj356.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOesUxs1jEmwLmCtS7ta4OwhvMXM54Z6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533146630759-ffqbe2f0vjrfgemne8brei92fu9vj356.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "533146630759-ftokrpps2b4bkrfflm343rtphibo6aeu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shoeAdmin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533146630759:android:25d9c8828cfc4f3b6bf2c2",
+        "android_client_info": {
+          "package_name": "com.example.store_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533146630759-ffqbe2f0vjrfgemne8brei92fu9vj356.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOesUxs1jEmwLmCtS7ta4OwhvMXM54Z6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533146630759-ffqbe2f0vjrfgemne8brei92fu9vj356.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "533146630759-ftokrpps2b4bkrfflm343rtphibo6aeu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shoeAdmin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
