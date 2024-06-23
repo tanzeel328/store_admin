@@ -1,8 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:store_admin/firebase_options.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:store_admin/pages/product_list.dart';
+import 'package:store_admin/pages/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +23,6 @@ class MyApp extends StatelessWidget {
         //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         //   useMaterial3: true,
         // ),
-        home: ProductListPage());
+        home: Home());
   }
 }

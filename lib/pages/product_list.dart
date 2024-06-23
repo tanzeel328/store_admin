@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:store_admin/models/products.dart';
 import 'package:store_admin/pages/product_add.dart';
 import 'package:store_admin/services/database_service.dart';
-import 'package:store_admin/widgets/product_card.dart';
-import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({super.key});
@@ -14,21 +12,11 @@ class ProductListPage extends StatefulWidget {
 
 class _ProductListPageState extends State<ProductListPage> {
   final DatabaseService _pdatabaseService = DatabaseService();
-  final _controller = ValueNotifier<bool>(false);
   bool deleter = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(
-          child: Text(
-            "Products Managment",
-            style: TextStyle(color: Colors.yellow),
-          ),
-        ),
-        backgroundColor: const Color.fromARGB(255, 102, 101, 101),
-      ),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
@@ -109,32 +97,6 @@ class _ProductListPageState extends State<ProductListPage> {
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        // AdvancedSwitch(
-                                        //   onChanged: (dynamic value) {
-                                        //     setState(() {
-                                        //       Productz updatedProduct =
-                                        //           product.copyWith(
-                                        //         inStock: !product.inStock,
-                                        //       );
-                                        //       _pdatabaseService.updateProduct(
-                                        //         productId,
-                                        //         updatedProduct,
-                                        //       );
-                                        //     });
-                                        //   },
-                                        //   controller: _controller,
-                                        //   activeColor: Colors.green,
-                                        //   inactiveColor: Colors.red,
-                                        //   activeChild: const Text('In Stock'),
-                                        //   inactiveChild:
-                                        //       const Text('Out of Stock'),
-                                        //   borderRadius: const BorderRadius.all(
-                                        //       Radius.circular(15)),
-                                        //   width: 110.0,
-                                        //   height: 30.0,
-                                        //   enabled: true,
-                                        //   disabledOpacity: 0.5,
-                                        // ),
                                         IconButton(
                                           onPressed: () {
                                             showDialog(
@@ -227,32 +189,6 @@ class _ProductListPageState extends State<ProductListPage> {
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        // AdvancedSwitch(
-                                        //   onChanged: (dynamic value) {
-                                        //     setState(() {
-                                        //       Productz updatedProduct =
-                                        //           product.copyWith(
-                                        //         inStock: !product.inStock,
-                                        //       );
-                                        //       _pdatabaseService.updateProduct(
-                                        //         productId,
-                                        //         updatedProduct,
-                                        //       );
-                                        //     });
-                                        //   },
-                                        //   controller: _controller,
-                                        //   activeColor: Colors.green,
-                                        //   inactiveColor: Colors.red,
-                                        //   activeChild: const Text('In Stock'),
-                                        //   inactiveChild:
-                                        //       const Text('Out of Stock'),
-                                        //   borderRadius: const BorderRadius.all(
-                                        //       Radius.circular(15)),
-                                        //   width: 110.0,
-                                        //   height: 30.0,
-                                        //   enabled: true,
-                                        //   disabledOpacity: 0.5,
-                                        // ),
                                         IconButton(
                                           onPressed: () {
                                             showDialog(

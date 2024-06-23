@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:store_admin/models/orderz.dart';
 import 'package:store_admin/models/products.dart';
 
+const String ORDER_Collection_REF = 'order';
 const String PRODUCTS_COLLECTION_REF = 'products';
 
 class DatabaseService {
@@ -30,5 +32,35 @@ class DatabaseService {
 
   void deleteProduct(String productid) {
     _productRef.doc(productid).delete();
+  }
+}
+
+class ODatabaseService {
+  final _firestore = FirebaseFirestore.instance;
+
+  late final CollectionReference _orderRef;
+
+  ODatabaseService() {
+    _orderRef =
+        _firestore.collection(ORDER_Collection_REF).withConverter<Orderz>(
+            fromFirestore: (snapshots, _) => Orderz.fromJson(
+                  snapshots.data()!,
+                ),
+            toFirestore: (order, _) => order.toJson());
+  }
+  Stream<QuerySnapshot> getOrderz() {
+    return _orderRef.snapshots();
+  }
+
+  void addOrder(Orderz order) async {
+    _orderRef.add(order);
+  }
+
+  void updateOrder(String orderid, Orderz order) {
+    _orderRef.doc(orderid).update(order.toJson());
+  }
+
+  void deleteOrder(String orderId) {
+    _orderRef.doc(orderId).delete();
   }
 }
