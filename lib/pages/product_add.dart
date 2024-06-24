@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_admin/models/products.dart';
+import 'package:store_admin/pages/home.dart';
 import 'package:store_admin/pages/product_list.dart';
 import 'package:store_admin/services/database_service.dart';
 import 'package:store_admin/widgets/form_field_container_widget.dart';
@@ -43,7 +44,7 @@ class _ProductAddPageState extends State<ProductAddPage> {
                 color: Colors.yellow,
                 child: const Center(
                   child: Text(
-                    'Add Package',
+                    'Add Product',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -131,8 +132,9 @@ class _ProductAddPageState extends State<ProductAddPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ProductListPage()),
+                                  builder: (context) => Home(
+                                        mIndex: 0,
+                                      )),
                             );
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(

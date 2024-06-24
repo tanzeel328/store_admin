@@ -16,6 +16,7 @@ class _ProductListPageState extends State<ProductListPage> {
 
   @override
   Widget build(BuildContext context) {
+    var products;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -40,7 +41,7 @@ class _ProductListPageState extends State<ProductListPage> {
             Expanded(
               child: StreamBuilder(
                 builder: (Context, snapshot) {
-                  List products = snapshot.data?.docs.cast<Object>() ?? [];
+                  products = snapshot.data?.docs.cast<Object>();
 
                   if (products.isEmpty) {
                     return const Center(

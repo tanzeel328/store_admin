@@ -4,20 +4,30 @@ import 'package:store_admin/pages/order_list_page.dart';
 import 'package:store_admin/pages/product_list.dart';
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  final int? mIndex;
+
+  Home({Key? key, this.mIndex}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  int myIndex = 1;
+  int myIndex = 0;
 
   List<Widget> widgetList = [
-    // const Dashboard(),
     const ProductListPage(),
     const OrderListPage(),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    // Set myIndex to mIndex if mIndex is not null
+    if (widget.mIndex != null) {
+      myIndex = widget.mIndex!;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +43,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            "Products Managment",
+            "Products Management",
             style: TextStyle(color: Colors.yellow),
           ),
         ),

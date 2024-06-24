@@ -66,7 +66,13 @@ class _OrderListPageState extends State<OrderListPage> {
                           side: const BorderSide(color: Colors.grey),
                         ),
                         controlAffinity: ListTileControlAffinity.leading,
-                        title: Text('Address : ${order.address}'),
+                        title: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Address : ${order.address}'),
+                            Text(order.email),
+                          ],
+                        ),
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [

@@ -5,12 +5,14 @@ class Orderz {
   Timestamp orderTime;
   List<Map<String, Object>> productz;
   int total;
+  String email;
 
   Orderz({
     required this.address,
     required this.orderTime,
     required this.productz,
     required this.total,
+    required this.email,
   });
 
   Map<String, Object?> toJson() {
@@ -19,6 +21,7 @@ class Orderz {
       'orderTime': orderTime,
       'products': productz,
       'total': total,
+      'email': email,
     };
   }
 
@@ -30,20 +33,22 @@ class Orderz {
               .map((item) => Map<String, Object>.from(item as Map))
               .toList(),
           total: json['total']! as int,
+          email: json['email']! as String,
         );
-
 
   Orderz copyWith({
     String? address,
     Timestamp? orderTime,
     List<Map<String, Object>>? productz,
     int? total,
+    String? email,
   }) {
     return Orderz(
       address: address ?? this.address,
       orderTime: orderTime ?? this.orderTime,
       productz: productz ?? this.productz,
       total: total ?? this.total,
+      email: email ?? this.email,
     );
   }
 }
